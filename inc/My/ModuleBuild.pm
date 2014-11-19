@@ -19,7 +19,8 @@ sub new
   $args{alien_build_commands} = [
     "$patch -p1 < ../../bison-3_0_2.patch",
     '%c --prefix=%s',
-    'make',
+    'make MANS=',
+    'touch doc/bison.1 doc/yacc.1',
   ];
   $args{alien_install_commands} = [
     'make install',
@@ -28,7 +29,7 @@ sub new
     protocol => 'http',
     host     => 'ftp.gnu.org',
     location => '/gnu/bison/',
-    pattern  => qr{^bison-3.0.2\.tar\.gz$},
+    pattern  => qr{^bison-3\.0\.2\.tar\.gz$},
   };
 
   if($ENV{ALIEN_FORCE} || do { local $quiet = 1; $class->alien_check_installed_version })
