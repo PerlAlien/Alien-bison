@@ -2,6 +2,10 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.05      2014-11-19 14:44:52 -0500
+  - first release to CPAN
+  - fix build failure when finding existing bison install
+
 0.04      2014-11-19 13:32:19 -0500
   - build correctly from source on windows
 
