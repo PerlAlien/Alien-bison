@@ -68,7 +68,7 @@ sub alien_check_installed_version
       foreach my $uninstall_key_name (@uninstall_key_names)
       {
         my $uninstall_key;
-        RegOpenKeyEx( HKEY_LOCAL_MACHINE, $uninstall_key_name, 0, KEY_READ, $uninstall_key ) || next;
+        RegOpenKeyEx( HKEY_LOCAL_MACHINE, $uninstall_key_name, 0, KEY_QUERY_VALUE | KEY_ENUMERATE_SUB_KEYS, $uninstall_key ) || next;
         
         my $pos = 0;
         my($subkey, $class, $time) = ('','','');
@@ -77,7 +77,7 @@ sub alien_check_installed_version
         {
           next unless $subkey =~ /^bison/i;
           my $bison_key;
-          RegOpenKeyEx( $uninstall_key, $subkey, 0, KEY_READ, $bison_key ) || next;
+          RegOpenKeyEx( $uninstall_key, $subkey, 0, KEY_QUERY_VALUE, $bison_key ) || next;
           
           my $data;
           if(RegQueryValueEx($bison_key, "InstallLocation", [], REG_SZ, $data, [] ))
