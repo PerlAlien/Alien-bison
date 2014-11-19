@@ -111,7 +111,7 @@ sub alien_check_installed_version
     };
     if(defined $stdout[0] && $stdout[0] =~ /^bison/ && $stdout[0] =~ /([0-9\.]+)$/)
     {
-      $self->config_data( bison_system_path => File::Spec->catdir(@$path) ) if @$path;
+      $self->config_data( bison_system_path => File::Spec->catdir(@$path) ) if ref($self) && @$path;
       return $1;
     }
   }
