@@ -31,6 +31,11 @@ sub new
   $self;
 }
 
+sub _short ($)
+{
+  $_[0] =~ /\s+/ ? Win32::GetShortPathName( $_[0] ) : $_[0];
+}
+
 sub alien_check_installed_version
 {
   my($self) = @_;
@@ -66,7 +71,7 @@ sub alien_check_installed_version
           my $data;
           if(RegQueryValueEx($bison_key, "InstallLocation", [], REG_SZ, $data, [] ))
           {
-            push @paths, [File::Spec->catdir($data, "bin")];
+            push @paths, [File::Spec->catdir(_short $data, "bin")];
           }
           
           RegCloseKey( $bison_key );
@@ -76,7 +81,8 @@ sub alien_check_installed_version
     };
     warn $@ if $@;
     
-    push @paths, map { [$ENV{$_}, qw( GnuWin32 bin )] } grep { defined $ENV{$_} } qw[ ProgramFiles ProgramFiles(x86) ];
+    push @paths, map { [_short $ENV{$_}, qw( GnuWin32 bin )] } grep { defined $ENV{$_} } qw[ ProgramFiles ProgramFiles(x86) ];
+    
   }
   
   print "try system paths:\n";
