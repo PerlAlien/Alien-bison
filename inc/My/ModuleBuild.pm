@@ -82,6 +82,7 @@ sub alien_check_installed_version
     warn $@ if $@;
     
     push @paths, map { [_short $ENV{$_}, qw( GnuWin32 bin )] } grep { defined $ENV{$_} } qw[ ProgramFiles ProgramFiles(x86) ];
+    push @paths, ['C:\\GnuWin32\\bin'];
     
   }
   
