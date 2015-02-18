@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.08      2015-02-18 17:18:58 -0500
   - Require Alien::m4 for source builds
     This in turn requires a version of m4 that AutoConf should
     find acceptable
