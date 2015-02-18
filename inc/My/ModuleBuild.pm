@@ -34,7 +34,7 @@ sub new
 
   if($ENV{ALIEN_FORCE} || do { local $quiet = 1; ! $class->alien_check_installed_version })
   {
-    $args{alien_bin_requires} = { 'Alien::m4' => 0, 'Alien::patch' => '0.03', };
+    $args{alien_bin_requires} = { 'Alien::m4' => '0.04', 'Alien::patch' => '0.03', };
   }
   
   my $self = $class->SUPER::new(%args);
