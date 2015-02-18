@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Require Alien::Base 0.010
 
 0.08      2015-02-18 17:18:58 -0500
   - Require Alien::m4 for source builds
