@@ -31,6 +31,7 @@ sub new
     location => '/gnu/bison/',
     pattern  => qr{^bison-3\.0\.2\.tar\.gz$},
   };
+  $args{alien_stage_install} = 1;
 
   if($ENV{ALIEN_FORCE} || do { local $quiet = 1; ! $class->alien_check_installed_version })
   {
