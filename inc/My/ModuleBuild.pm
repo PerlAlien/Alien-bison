@@ -17,7 +17,7 @@ sub new
   
   $args{alien_name} = 'bison';
   $args{alien_build_commands} = [
-    "$patch -p1 < ../../bison-3_0_2.patch",
+    "$patch -p1 < ../../patches/bison-3_0_2.diff",
     '%c --prefix=%s',
     'make MANS=',
     'touch doc/bison.1 doc/yacc.1',
