@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.14      2016-01-28 13:11:36 -0500
+  - Update version of bison to use install from source to 3.0.4
+
 0.12      2016-01-28 12:41:41 -0500
   - Use Alien::Base::ModuleBuild as configure_requires
     (instead of Alien::Base)
