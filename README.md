@@ -1,4 +1,4 @@
-# Alien::bison
+# Alien::bison [![Build Status](https://secure.travis-ci.org/plicease/Alien-bison.png)](http://travis-ci.org/plicease/Alien-bison)
 
 Find or build bison, the parser generator
 
