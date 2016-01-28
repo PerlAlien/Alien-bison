@@ -7,42 +7,6 @@ use File::chdir;
 use Capture::Tiny qw( capture_stderr );
 use File::Spec;
 
-our $quiet = 0;
-
-my $patch = $^O eq 'MSWin32' ? 'patch --binary' : 'patch';
-
-sub new
-{
-  my($class, %args) = @_;
-  
-  $args{alien_name} = 'bison';
-  $args{alien_build_commands} = [
-    "$patch -p1 < ../../patches/bison-3_0_2.diff",
-    '%c --prefix=%s',
-    'make MANS=',
-    'touch doc/bison.1 doc/yacc.1',
-  ];
-  $args{alien_install_commands} = [
-    'make install',
-  ];
-  $args{alien_repository} = {
-    protocol => 'http',
-    host     => 'ftp.gnu.org',
-    location => '/gnu/bison/',
-    pattern  => qr{^bison-3\.0\.2\.tar\.gz$},
-  };
-  $args{alien_stage_install} = 1;
-
-  if($ENV{ALIEN_FORCE} || do { local $quiet = 1; ! $class->alien_check_installed_version })
-  {
-    $args{alien_bin_requires} = { 'Alien::m4' => '0.04', 'Alien::patch' => '0.03', };
-  }
-  
-  my $self = $class->SUPER::new(%args);
-  
-  $self;
-}
-
 sub _short ($)
 {
   $_[0] =~ /\s+/ ? Win32::GetShortPathName( $_[0] ) : $_[0];
@@ -98,11 +62,8 @@ sub alien_check_installed_version
     
   }
   
-  unless($quiet)
-  {
-    print "try system paths:\n";
-    print "  - ", $_, "\n" for map { $_ eq '' ? 'PATH' : $_ } map { File::Spec->catdir(@$_) } @paths;
-  }
+  print "try system paths:\n";
+  print "  - ", $_, "\n" for map { $_ eq '' ? 'PATH' : $_ } map { File::Spec->catdir(@$_) } @paths;
   
   foreach my $path (@paths)
   {
