@@ -2,6 +2,10 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.15      2016-01-29 10:06:11 -0500
+  - Fixed metadata bug where bin_requires were included
+    as configure_requires
+
 0.14      2016-01-28 13:11:36 -0500
   - Update version of bison to use install from source to 3.0.4
 
