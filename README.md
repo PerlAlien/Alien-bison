@@ -25,9 +25,17 @@ From Alien::Base Build.PL
 This package can be used by other CPAN modules that require bison,
 the GNU Parser generator based on YACC.
 
+# HELPERS
+
+## bison
+
+    %{bison}
+
+Returns the name of the bison command.  Usually just `bison`.
+
 # AUTHOR
 
-Graham Ollis &lt;plicease@cpan.org>
+Graham Ollis <plicease@cpan.org>
 
 # COPYRIGHT AND LICENSE
 

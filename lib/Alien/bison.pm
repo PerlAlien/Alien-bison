@@ -44,4 +44,21 @@ sub bin_dir
   return $class->SUPER::bin_dir;
 }
 
+=head1 HELPERS
+
+=head2 bison
+
+ %{bison}
+
+Returns the name of the bison command.  Usually just C<bison>.
+
+=cut
+
+sub alien_helper
+{
+  return {
+    bison => sub { 'bison' },
+  };
+}
+
 1;
