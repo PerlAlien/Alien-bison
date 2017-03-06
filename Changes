@@ -2,6 +2,9 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+0.18      2017-03-06 00:04:23 -0500
+  - Migrate to Alien::Build + alienfile
+
 0.17      2017-01-18 15:14:26 -0500
   - Add a %{bison} helper
 
