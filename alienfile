@@ -17,11 +17,12 @@ plugin 'Probe::CommandLine' => (
 
 share {
 
-  requires 'Alien::patch' => '0.09';
   requires 'Alien::m4'    => '0.08';
 
+  patch [ '%{patch} -p1 < %{alien.install.patch}/bison-3_0_2.diff' ] if $^O eq 'MSWin32';
+
   plugin 'Download' => (
-    url     => 'ftp://ftp.gnu.org/gnu/bison/',
+    url     => 'http://ftp.gnu.org/gnu/bison/',
     version => qr/^bison-([0-9\.]+)\.tar\.gz$/,
   );
 

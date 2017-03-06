@@ -11,12 +11,13 @@ my $post_diag;
 
 $modules{$_} = $_ for qw(
   Alien::Base
-  Alien::Base::ModuleBuild
-  Alien::m4
-  Alien::patch
+  Alien::Build
+  Alien::Build::MM
+  Alien::Build::Plugin::Probe::GnuWin32
   Capture::Tiny
-  File::ShareDir
+  ExtUtils::MakeMaker
   File::chdir
+  IPC::Cmd
   Test::More
 );
 
