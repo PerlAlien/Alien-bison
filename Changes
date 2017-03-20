@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.19      2017-03-20 02:27:47 -0400
   - Remove custon bin_dir no longer necessary
 
 0.18      2017-03-06 00:04:23 -0500
