@@ -21,7 +21,12 @@ $modules{$_} = $_ for qw(
   Test::More
 );
 
-
+$post_diag = sub {
+  use Alien::bison;
+  diag "version      = @{[ Alien::bison->config('version') ]}";
+  diag "install_type = @{[ Alien::bison->install_type      ]}";
+  diag "bin_dir      = $_" for Alien::bison->bin_dir;
+};
 
 my @modules = sort keys %modules;
 

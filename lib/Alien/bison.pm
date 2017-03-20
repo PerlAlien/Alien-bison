@@ -30,20 +30,6 @@ From Alien::Base Build.PL
 This package can be used by other CPAN modules that require bison,
 the GNU Parser generator based on YACC.
 
-=cut
-
-sub bin_dir
-{
-  my($class) = @_;
-  if($class->install_type('system'))
-  {
-    my $path = $class->config('bison_system_path');
-    return ($path) if $path;
-  }
-
-  return $class->SUPER::bin_dir;
-}
-
 =head1 HELPERS
 
 =head2 bison
