@@ -8,7 +8,8 @@ From a Perl script
 
     use Alien::bison;
     use Env qw( @PATH );
-    unshift @PATH, Alien::bison->bin_dir;  # bison is now in your path
+    unshift @PATH, Alien::bison->bin_dir;
+    system 'bison', ...;
 
 From Alien::Base Build.PL
 
