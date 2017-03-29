@@ -3,7 +3,7 @@ sudo: false
 
 install:
   - perlbrew list
-  - dzil authordeps --missing | cpanm -n
+  - af missing | cpanm
   - dzil listdeps --missing | cpanm -n
   - dzil aliendeps --env | cpanm -n
 
