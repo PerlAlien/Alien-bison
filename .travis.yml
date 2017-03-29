@@ -6,7 +6,7 @@ install:
   - cpanm -n App::af
   - af missing | cpanm
   - dzil listdeps --missing | cpanm -n
-  - dzil aliendeps --env | cpanm -n
+  - dzil authordeps --env | cpanm -n
 
 perl:
   - "5.14"
