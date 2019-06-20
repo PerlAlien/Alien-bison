@@ -25,7 +25,8 @@ share {
 
   requires 'Alien::m4'    => '0.08';
 
-  patch [ '%{patch} -p1 < %{alien.install.patch}/bison-3_0_2.diff' ] if $^O eq 'MSWin32';
+  # FIXME: this doesn't apply cleanly anymore
+  #patch [ '%{patch} -p1 < %{alien.install.patch}/bison-3_0_2.diff' ] if $^O eq 'MSWin32';
 
   plugin 'Download' => (
     url     => 'http://ftp.gnu.org/gnu/bison/',
