@@ -13,7 +13,20 @@ unshift @PATH, Alien::bison->bin_dir;
 system 'bison', ...;
 ```
 
-From Alien::Base Build.PL
+From [alienfile](https://metacpan.org/pod/alienfile):
+
+```perl
+use alienfile;
+
+share {
+  ..
+  requires 'Alien::bison' => 0;
+  build [ '%{bison} ...' ];
+  ...
+};
+```
+
+From Build.PL for [Alien::Base::ModuleBuild](https://metacpan.org/pod/Alien::Base::ModuleBuild):
 
 ```perl
 use Alien:Base::ModuleBuild;
