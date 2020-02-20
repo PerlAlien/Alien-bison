@@ -1,10 +1,6 @@
-use strict;
-use warnings;
-use Test::Stream -V1;
+use Test2::V0 -no_srand => 1;
 use Test::Alien;
 use Alien::bison;
-
-plan 4;
 
 alien_ok 'Alien::bison';
 my $run = run_ok(['bison', '--version'])
@@ -12,3 +8,4 @@ my $run = run_ok(['bison', '--version'])
 
 $run->success ? $run->note : $run->diag;
 
+done_testing;
