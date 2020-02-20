@@ -33,8 +33,8 @@ share {
     decoder => 'Decode::Mojo',
   );
 
-  plugin 'Extract' => 'tar.gz';  
-  
+  plugin 'Extract' => 'tar.gz';
+
   plugin 'Build::Autoconf' => ();
 
   gather sub {
