@@ -1,4 +1,4 @@
-# Alien::bison [![Build Status](https://secure.travis-ci.org/plicease/Alien-bison.png)](http://travis-ci.org/plicease/Alien-bison)
+# Alien::bison [![Build Status](https://secure.travis-ci.org/plicease/Alien-bison.png)](http://travis-ci.org/plicease/Alien-bison) ![macos-system](https://github.com/plicease/Alien-bison/workflows/macos-system/badge.svg) ![macos-share](https://github.com/plicease/Alien-bison/workflows/macos-share/badge.svg)
 
 Find or build bison, the parser generator
 
