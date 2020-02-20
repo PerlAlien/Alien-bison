@@ -6,20 +6,24 @@ Find or build bison, the parser generator
 
 From a Perl script
 
-    use Alien::bison;
-    use Env qw( @PATH );
-    unshift @PATH, Alien::bison->bin_dir;
-    system 'bison', ...;
+```perl
+use Alien::bison;
+use Env qw( @PATH );
+unshift @PATH, Alien::bison->bin_dir;
+system 'bison', ...;
+```
 
 From Alien::Base Build.PL
 
-    use Alien:Base::ModuleBuild;
-    my $builder = Module::Build->new(
-      ...
-      alien_bin_requires => [ 'Alien::bison' ],
-      ...
-    );
-    $builder->create_build_script;
+```perl
+use Alien:Base::ModuleBuild;
+my $builder = Module::Build->new(
+  ...
+  alien_bin_requires => [ 'Alien::bison' ],
+  ...
+);
+$builder->create_build_script;
+```
 
 # DESCRIPTION
 
@@ -30,7 +34,9 @@ the GNU Parser generator based on YACC.
 
 ## bison
 
-    %{bison}
+```
+%{bison}
+```
 
 Returns the name of the bison command.  Usually just `bison`.
 
