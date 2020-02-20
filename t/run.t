@@ -11,4 +11,4 @@ my $run = run_ok(['bison', '--version'])
   ->exit_is(0);
 
 $run->success ? $run->note : $run->diag;
-  
+
