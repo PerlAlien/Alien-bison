@@ -6,7 +6,7 @@ configure {
 };
 
 plugin 'Probe::GnuWin32' => (
-  registry_key_regex  => qr/^flex/i,
+  registry_key_regex  => qr/^bison/i,
   exe_name            => 'bison',
   exe_version         => qr/bison .*?([0-9\.]+)/,
   exe_match           => qr/bison/,
