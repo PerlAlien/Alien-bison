@@ -16,7 +16,18 @@ From a Perl script
  unshift @PATH, Alien::bison->bin_dir;
  system 'bison', ...;
 
-From Alien::Base Build.PL
+From L<alienfile>:
+
+ use alienfile;
+ 
+ share {
+   ..
+   requires 'Alien::bison' => 0;
+   build [ '%{bison} ...' ];
+   ...
+ };
+
+From Build.PL for L<Alien::Base::ModuleBuild>:
 
  use Alien:Base::ModuleBuild;
  my $builder = Module::Build->new(
