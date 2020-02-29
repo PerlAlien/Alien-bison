@@ -2,6 +2,7 @@ package Alien::bison;
 
 use strict;
 use warnings;
+use 5.008001;
 use base qw( Alien::Base );
 
 # ABSTRACT: Find or build bison, the parser generator
