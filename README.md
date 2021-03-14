@@ -1,4 +1,4 @@
-# Alien::bison [![Build Status](https://travis-ci.org/PerlAlien/Alien-bison.svg)](http://travis-ci.org/PerlAlien/Alien-bison) ![macos-system](https://github.com/PerlAlien/Alien-bison/workflows/macos-system/badge.svg) ![macos-share](https://github.com/PerlAlien/Alien-bison/workflows/macos-share/badge.svg)
+# Alien::bison [![Build Status](https://travis-ci.org/PerlAlien/Alien-bison.svg?branch=main)](https://travis-ci.org/PerlAlien/Alien-bison) ![macos-system](https://github.com/PerlAlien/Alien-bison/workflows/macos-system/badge.svg) ![macos-share](https://github.com/PerlAlien/Alien-bison/workflows/macos-share/badge.svg)
 
 Find or build bison, the parser generator
 
