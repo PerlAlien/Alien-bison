@@ -1,4 +1,4 @@
-# Alien::bison ![static](https://github.com/PerlAlien/Alien-bison/workflows/static/badge.svg) ![linux](https://github.com/PerlAlien/Alien-bison/workflows/linux/badge.svg) ![macos-system](https://github.com/PerlAlien/Alien-bison/workflows/macos-system/badge.svg) ![macos-share](https://github.com/PerlAlien/Alien-bison/workflows/macos-share/badge.svg)
+# Alien::bison ![static](https://github.com/PerlAlien/Alien-bison/workflows/static/badge.svg) ![linux](https://github.com/PerlAlien/Alien-bison/workflows/linux/badge.svg)
 
 Find or build bison, the parser generator
 
@@ -52,6 +52,11 @@ the GNU Parser generator based on YACC.
 ```
 
 Returns the name of the bison command.  Usually just `bison`.
+
+# SEE ALSO
+
+- [Alien](https://metacpan.org/pod/Alien)
+- [Alien::flex](https://metacpan.org/pod/Alien::flex)
 
 # AUTHOR
 
