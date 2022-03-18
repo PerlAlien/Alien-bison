@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Disable generation of info docs for platforms that
+    do not have makeinfo (gh#11)
 
 0.21      2020-02-19 20:57:01 -0500
   - Use https instead of http
