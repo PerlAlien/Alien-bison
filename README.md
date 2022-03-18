@@ -1,4 +1,4 @@
-# Alien::bison ![static](https://github.com/PerlAlien/Alien-bison/workflows/static/badge.svg) ![linux](https://github.com/PerlAlien/Alien-bison/workflows/linux/badge.svg) ![macos](https://github.com/PerlAlien/Alien-bison/workflows/macos/badge.svg)
+# Alien::bison ![static](https://github.com/PerlAlien/Alien-bison/workflows/static/badge.svg) ![linux](https://github.com/PerlAlien/Alien-bison/workflows/linux/badge.svg) ![macos](https://github.com/PerlAlien/Alien-bison/workflows/macos/badge.svg) ![windows](https://github.com/PerlAlien/Alien-bison/workflows/windows/badge.svg)
 
 Find or build bison, the parser generator
 
