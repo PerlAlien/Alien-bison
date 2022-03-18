@@ -21,7 +21,7 @@ else
     cip sudo apt-get update
     cip sudo apt-get -y install m4
   fi
-  env ALIEN_INSTALL_TYPE=default cpanm -n Alien::m4
+  env ALIEN_INSTALL_TYPE=default cip exec cpanm -n Alien::m4
 fi
 
 cip exec dzil-cpanm -n Alien::Build::Plugin::Probe::GnuWin32
